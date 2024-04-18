@@ -27,6 +27,7 @@ private static final String BASEURL = "https://pokeapi.co/api/v2/";
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASEURL)
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         obtenerDatosPokemon();
